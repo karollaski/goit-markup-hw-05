@@ -79,13 +79,33 @@ figure {
 }
 .menu-link {
   color: #212121;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.current-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  background-color: #212121;
+  height: 4px;
+  width: 58px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
-.menu-link:focus {
+.menu-link:focus::after {
   color: var(--brand-color);
 }
 .menu-link:active {
   color: var(--brand-color);
+}
+.menu-link:focus,
+.menu-link:hover::after {
+  background-color: var(--brand-color);
 }
 .contact-header {
   font-weight: 500;
@@ -103,6 +123,9 @@ figure {
 }
 .contact-header-link {
   color: var(--second-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-header-items:hover .contact-icons,
 .contact-header-items:focus .contact-icons,
@@ -236,6 +259,24 @@ figure {
   align-items: center;
   gap: 30px;
 }
+.wedo-list-items {
+  position: relative;
+}
+.wedo-list-description {
+  color: var(--contrast-color);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0, 03em;
+  line-height: 1.14;
+  text-align: center;
+  padding-block: 27px;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .team {
   background-color: var(--team-background-color);
   display: flex;
@@ -304,6 +345,9 @@ figure {
   height: 44px;
   --color4: var(--light-grey-color);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-background:hover,
 .team-social-background:focus,
@@ -332,6 +376,9 @@ figure {
   --color2: var(--light-grey-color);
   --color3: var(--light-grey-color);
   border: solid 1px var(--light-grey-color);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-items:hover {
   cursor: pointer;
@@ -370,6 +417,9 @@ figure {
 }
 .contact-foot-link {
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-social-list {
   display: flex;
@@ -398,6 +448,9 @@ figure {
   --color4: var(--contrast-color);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subpages {
   display: flex;
@@ -429,6 +482,9 @@ figure {
   letter-spacing: 0.03em;
   border: none;
   padding: 0;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filtr-button-description {
   display: block;
@@ -437,6 +493,7 @@ figure {
   padding-inline: 22px;
 }
 .filtr-button:hover,
+.filtr-button:focus,
 .filtr-button:active {
   color: var(--contrast-color);
   background-color: var(--brand-color);
@@ -452,6 +509,9 @@ figure {
 .projects-list-items {
   flex-basis: calc((100%- (2 * 30px) / 3));
   border-bottom: 1px solid #ececec;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-items:hover,
 .projects-list-items:focus {
