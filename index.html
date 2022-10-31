@@ -67,9 +67,14 @@
           <h1 class="heading-title">
             Efektywne rozwiązanie dla waszego biznesu
           </h1>
-          <button class="button heading-button" type="button">
+          <button class="button heading-button" type="button" data-modal-open>
             <span class="heading-button-description">Zamów usługe</span>
           </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-btn" data-modal-close><span>X</span></button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="lorem section">
@@ -489,5 +494,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

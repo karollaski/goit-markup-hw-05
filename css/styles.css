@@ -89,21 +89,23 @@ figure {
   position: absolute;
   left: 0;
   bottom: -32px;
-  background-color: #212121;
+  background-color: var(--brand-color);
   height: 4px;
   width: 58px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current-page {
+  color: var(--brand-color);
+}
 .menu-link:hover,
-.menu-link:focus::after {
+.menu-link:focus {
   color: var(--brand-color);
 }
 .menu-link:active {
   color: var(--brand-color);
 }
-.menu-link:focus,
 .menu-link:hover::after {
   background-color: var(--brand-color);
 }
@@ -137,13 +139,11 @@ figure {
 .contact-foot-link:active,
 .contact-foot-link:focus {
   color: var(--brand-color);
-  --color2: var(--brand-color);
-  --color4: var(--brand-color);
+  fill: var(--brand-color);
 }
 
 .contact-icons {
-  --color2: var(--second-text-color);
-  --color4: var(--second-text-color);
+  fill: var(--second-text-color);
   margin-right: 10px;
 }
 .heading {
@@ -190,6 +190,7 @@ figure {
   align-items: center;
   border: none;
   padding: 0;
+  border-radius: 4px;
 }
 .heading-button-description {
   display: block;
@@ -197,6 +198,43 @@ figure {
   padding-bottom: 10px;
   padding-left: 42px;
   padding-right: 41px;
+}
+/* MODAL WINDOW */
+.backdrop {
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-property: opacity;
+  transition-duration: 250ms;
+}
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--contrast-color);
+  margin: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.modal-btn {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: var(--contrast-color);
+  align-self: flex-end;
+}
+.is-hidden {
+  transform: scale(0);
+  opacity: 0;
 }
 .lorem {
   display: flex;
@@ -230,8 +268,7 @@ figure {
   background-color: var(--team-background-color);
   padding: 25px 100px 25px 100px;
   margin-bottom: 30px;
-  --color1: var(--main-text-color);
-  --color2: var(--brand-color);
+  fill: var(--main-text-color);
 }
 .wedo-heading,
 .team-heading,
@@ -302,6 +339,7 @@ figure {
 .team-list-items {
   background-color: var(--contrast-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
 .team-description {
   padding-top: 30px;
@@ -343,9 +381,9 @@ figure {
   align-items: center;
   width: 44px;
   height: 44px;
-  --color4: var(--light-grey-color);
+  fill: var(--light-grey-color);
   border-radius: 50%;
-  transition-property: background-color;
+  transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -355,8 +393,7 @@ figure {
 .foot-social-background:focus {
   cursor: pointer;
   background-color: var(--brand-color);
-  --color3: var(--contrast-color);
-  --color4: var(--contrast-color);
+  fill: var(--contrast-color);
 }
 .customers-wrapper {
   display: flex;
@@ -373,17 +410,16 @@ figure {
   align-items: center;
 }
 .customers-list-items {
-  --color2: var(--light-grey-color);
-  --color3: var(--light-grey-color);
+  fill: var(--light-grey-color);
   border: solid 1px var(--light-grey-color);
-  transition-property: border;
+  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
 }
 .customers-list-items:hover {
   cursor: pointer;
-  --color2: var(--brand-color);
-  --color3: var(--brand-color);
+  fill: var(--brand-color);
   border: solid 1px var(--brand-color);
 }
 .foot {
@@ -444,8 +480,7 @@ figure {
   align-items: center;
   width: 44px;
   height: 44px;
-  --color3: var(--contrast-color);
-  --color4: var(--contrast-color);
+  fill: var(--contrast-color);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition-property: background-color;
@@ -485,6 +520,7 @@ figure {
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
 }
 .filtr-button-description {
   display: block;
@@ -517,6 +553,30 @@ figure {
 .projects-list-items:focus {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.projects-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.projects-list-items:hover .projects-overlay {
+  transform: translateY(0);
+}
+.projects-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--contrast-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding-block: 49px;
+  padding-left: 24px;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-description {
   margin-block: 20px;
