@@ -540,7 +540,6 @@ figure {
   gap: 30px;
 }
 .projects-list-items {
-  flex-basis: calc((100% - (2 * 30px) / 3));
   border-bottom: 1px solid #ececec;
   transition-property: box-shadow;
   transition-duration: 250ms;
