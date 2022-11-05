@@ -6,7 +6,6 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text-color);
-  /* width: 1600px; */
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -45,10 +44,6 @@ figure {
   margin: 0 auto;
 }
 .top {
-  /* background-color: var(--main-background-color); */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   border-bottom: 1px solid #ececec;
 }
 .top-wrapper {
@@ -61,7 +56,6 @@ figure {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  /* letter-spacing: 0.03em; */
   line-height: 1.19;
 }
 .logo-web {
@@ -76,15 +70,11 @@ figure {
 }
 .menu {
   font-weight: 500;
-  /* font-size: 14px; */
   list-style-type: none;
   letter-spacing: 0.02em;
   line-height: 1.14;
   display: flex;
-  /* justify-content: space-between;
-  padding: 0; */
   margin-block: 32px;
-  /* margin-right: 345px; */
   gap: 50px;
 }
 .menu-link {
@@ -121,13 +111,10 @@ figure {
 }
 .contact-header {
   font-weight: 500;
-  /* font-size: 14px; */
   letter-spacing: 00.02em;
   line-height: 1.14;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  /* padding: 0; */
   gap: 50px;
 }
 .contact-header-items {
@@ -193,7 +180,6 @@ figure {
   width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
-  /* width: 43.5%; */
 }
 .button {
   cursor: pointer;
@@ -215,13 +201,6 @@ figure {
   padding-left: 42px;
   padding-right: 41px;
 }
-/* .heading-button-description {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 42px;
-  padding-right: 41px;
-} */
 /* MODAL WINDOW */
 .backdrop {
   position: fixed;
@@ -259,11 +238,6 @@ figure {
   transform: scale(0);
   opacity: 0;
 }
-/* .lorem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 .lorem-wrapper {
   list-style-type: none;
   display: flex;
@@ -274,15 +248,12 @@ figure {
 .lorem-items-heading {
   font-size: inherit;
   line-height: 1.14;
-  /* letter-spacing: 0.03em; */
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 .lorem-items-text {
   color: var(--second-text-color);
-  /* font-size: 14px; */
   line-height: 1.71em;
-  /* letter-spacing: 0.03em; */
 }
 .lorem-items-icons {
   display: flex;
@@ -299,23 +270,13 @@ figure {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  /* letter-spacing: 0.03em; */
 }
 .wedo {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   padding-bottom: 94px;
 }
-/* .wedo-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
 .wedo-list {
   list-style-type: none;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   gap: 30px;
 }
@@ -325,16 +286,11 @@ figure {
 .wedo-list-description {
   color: var(--contrast-color);
   font-weight: 700;
-  /* font-size: 14px; */
-  /* letter-spacing: 0.03em; */
   line-height: 1.14;
-  /* text-align: center; */
-  /* padding-block: 27px; */
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
   position: absolute;
-  /* left: 0; */
   bottom: 0;
   height: 70px;
   display: flex;
@@ -375,7 +331,6 @@ figure {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  /* letter-spacing: 0.03em; */
   margin-bottom: 10px;
 }
 .team-list-department {
@@ -383,7 +338,6 @@ figure {
   color: var(--second-text-color);
   line-height: 1.19;
   text-align: center;
-  /* letter-spacing: 0.03em; */
 }
 .team-social-wrapper {
   padding-inline: 32px;
@@ -416,7 +370,6 @@ figure {
 .team-social-background:focus,
 .foot-social-background:hover,
 .foot-social-background:focus {
-  /* cursor: pointer; */
   background-color: var(--brand-color);
   fill: var(--contrast-color);
 }
@@ -471,9 +424,7 @@ figure {
 }
 .contact-foot-list {
   color: var(--contrast-color);
-  /* font-size: 14px; */
   line-height: 1.71;
-  /* letter-spacing: 0.03em; */
   margin-block: 9px;
 }
 .contact-foot-link {
@@ -491,10 +442,8 @@ figure {
 }
 .foot-social-description {
   color: var(--contrast-color);
-  /* font-size: 14px; */
   text-transform: uppercase;
   font-weight: 700;
-  /* letter-spacing: 0.03em; */
   line-height: 1.14;
   margin-top: 12px;
   margin-bottom: 20px;
@@ -592,7 +541,6 @@ figure {
   height: 100%;
   font-size: 18px;
   line-height: 1.55;
-  /* letter-spacing: 0.03em; */
   color: var(--contrast-color);
   background-color: rgba(33, 150, 243, 0.9);
   padding-block: 49px;
@@ -617,7 +565,6 @@ figure {
   color: var(--second-text-color);
   font-size: 16px;
   line-height: 1.87;
-  /* letter-spacing: 0.03em; */
 }
 .section {
   padding-top: 94px;
